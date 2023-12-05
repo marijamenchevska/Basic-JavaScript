@@ -41,7 +41,7 @@ console.log("The perimeter of your rectangle is:", rectanglePerimeter);
 //6. Write a JavaScript program that will calculate area of circle. Print the result in the console.
 
 let radius = prompt("Enter the radius of your circle:");
-let pi = Math.PI;
+const pi = Math.PI;
 let area = radius ** 2 * pi;
 
 console.log("The area of your circle is:", area);
