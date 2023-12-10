@@ -259,7 +259,7 @@ if (scores === "" || scores === null) {
 else if (individualScore.length !=5) {
     alert("Please enter 5 numbers.");
 }
-else if (scoreCheck.includes(NaN)){
+else if (scoreCheck.includes(NaN)) {
     alert("Please enter only numbers for all subjects.");
 }
 else {
