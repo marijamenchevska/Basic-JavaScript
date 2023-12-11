@@ -233,170 +233,174 @@ else {
 // 6. Write a program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following: Percentage >= 90% : Grade A Percentage >= 80% : Grade B Percentage >= 70% : Grade C Percentage >= 60% : Grade D Percentage >= 40% : Grade E Percentage < 40% : Grade F.
 
 let scores = prompt("Enter your scores for Physics, Chemistry, Biology, Mathematics and Computer Science separated by an empty space.");
-let individualScore = scores.split(" ");
-
-let physicsScore = parseInt(individualScore[0]);
-let chemistryScore = parseInt(individualScore[1]);
-let biologyScore = parseInt(individualScore[2]);
-let mathScore = parseInt(individualScore[3]);
-let comSciScore = parseInt(individualScore[4]);
-
-let physicsGrade;
-let chemistryGrade;
-let biologyGrade;
-let mathGrade;
-let comSciGrade;
-
-let scoreCheck = [physicsScore, chemistryScore, biologyScore, mathScore, comSciScore];
-
-let averageScore = Math.round((physicsScore + chemistryScore + biologyScore + mathScore + comSciScore) / scoreCheck.length);
-
-let averageGrade;
 
 if (scores === "" || scores === null) { 
     alert("Please enter subject scores.");
 }
-else if (individualScore.length !=5) {
-    alert("Please enter 5 numbers.");
-}
-else if (scoreCheck.includes(NaN)) {
-    alert("Please enter only numbers for all subjects.");
-}
 else {
-    if (physicsScore >= 90 && physicsScore <= 100) {
-        physicsGrade = "A";
-    }
-    else if (physicsScore >= 80) {
-        physicsGrade = "B";
-    }
-    else if (physicsScore >= 70) {
-        physicsGrade = "C";
-    }
-    else if (physicsScore >= 60) {
-        physicsGrade = "D";
-    }
-    else if (physicsScore >= 40) {
-        physicsGrade = "E";
-    }
-    else if (physicsScore >= 0 && physicsScore < 40) {
-        physicsGrade = "F";
-    }
-    else {
-        physicsGrade = "Invalid";
-    }
+    let individualScore = scores.split(" ");
 
-    if (chemistryScore >= 90) {
-        chemistryGrade = "A";
-    }
-    else if (chemistryScore >= 80) {
-        chemistryGrade = "B";
-    }
-    else if (chemistryScore >= 70) {
-        chemistryGrade = "C";
-    }
-    else if (chemistryScore >= 60) {
-        chemistryGrade = "D";
-    }
-    else if (chemistryScore >= 40) {
-        chemistryGrade = "E";
-    }
-    else if (chemistryScore >= 0 && chemistryScore < 40) {
-        chemistryGrade = "F";
-    }
-    else {
-        chemistryGrade = "Invalid";
-    }
+    let physicsScore = parseInt(individualScore[0]);
+    let chemistryScore = parseInt(individualScore[1]);
+    let biologyScore = parseInt(individualScore[2]);
+    let mathScore = parseInt(individualScore[3]);
+    let comSciScore = parseInt(individualScore[4]);
 
-    if (biologyScore >= 90) {
-        biologyGrade = "A";
-    }
-    else if (biologyScore >= 80) {
-        biologyGrade = "B";
-    }
-    else if (biologyScore >= 70) {
-        biologyGrade = "C";
-    }
-    else if (biologyScore >= 60) {
-        biologyGrade = "D";
-    }
-    else if (biologyScore >= 40) {
-        biologyGrade = "E";
-    }
-    else if (biologyScore >= 0 && biologyScore < 40) {
-        biologyGrade = "F";
-    }
-    else {
-        biologyGrade = "Invalid";
-    }
+    let physicsGrade;
+    let chemistryGrade;
+    let biologyGrade;
+    let mathGrade;
+    let comSciGrade;
 
-    if (mathScore >= 90) {
-        mathGrade = "A";
-    }
-    else if (mathScore >= 80) {
-        mathGrade = "B";
-    }
-    else if (mathScore >= 70) {
-        mathGrade = "C";
-    }
-    else if (mathScore >= 60) {
-        mathGrade = "D";
-    }
-    else if (mathScore >= 40) {
-        mathGrade = "E";
-    }
-    else if (mathScore >= 0 && mathScore < 40) {
-        mathGrade = "F";
-    }
-    else {
-        mathGrade = "Invalid";
-    }
+    let scoreCheck = [physicsScore, chemistryScore, biologyScore, mathScore, comSciScore];
 
-    if (comSciScore >= 90) {
-        comSciGrade = "A";
-    }
-    else if (comSciScore >= 80) {
-        comSciGrade = "B";
-    }
-    else if (comSciScore >= 70) {
-        comSciGrade = "C";
-    }
-    else if (comSciScore >= 60) {
-        comSciGrade = "D";
-    }
-    else if (comSciScore >= 40) {
-        comSciGrade = "E";
-    }
-    else if (comSciScore >= 0 && comSciScore < 40) {
-        comSciGrade = "F";
-    }
-    else {
-        comSciGrade = "Invalid";
-    }
+    let averageScore = Math.round((physicsScore + chemistryScore + biologyScore + mathScore + comSciScore) / scoreCheck.length);
 
-    if (physicsGrade == "Invalid" || chemistryGrade == "Invalid" || biologyGrade == "Invalid" || mathGrade == "Invalid" || comSciGrade == "Invalid") {
-        alert("Please enter only numbers from 0 to 100.");
+    let averageGrade;
+
+    if (individualScore.length !=5) {
+        alert("Please enter 5 numbers.");
+    }
+    else if (scoreCheck.includes(NaN)) {
+        alert("Please enter only numbers for all subjects.");
     }
     else {
-        if (averageScore >= 90) {
-            averageGrade = "A";
+        if (physicsScore >= 90 && physicsScore <= 100) {
+            physicsGrade = "A";
         }
-        else if (averageScore >= 80) {
-            averageGrade = "B";
+        else if (physicsScore >= 80) {
+            physicsGrade = "B";
         }
-        else if (averageScore >= 70) {
-            averageGrade = "C";
+        else if (physicsScore >= 70) {
+            physicsGrade = "C";
         }
-        else if (averageScore >= 60) {
-            averageGrade = "D";
+        else if (physicsScore >= 60) {
+            physicsGrade = "D";
         }
-        else if (averageScore >= 40) {
-            averageGrade = "E";
+        else if (physicsScore >= 40) {
+            physicsGrade = "E";
+        }
+        else if (physicsScore >= 0 && physicsScore < 40) {
+            physicsGrade = "F";
         }
         else {
-            averageGrade = "F";
+            physicsGrade = "Invalid";
         }
 
-        alert(`Your Physics grade is ${physicsGrade}.\nYour Chemistry grade is ${chemistryGrade}.\nYour Biology grade is ${biologyGrade}.\nYour Mathematics grade is ${mathGrade}.\nYour Computer Science grade is ${comSciGrade}.\nYour average score is ${averageScore}%, and your average grade is ${averageGrade}.`);
+        if (chemistryScore >= 90) {
+            chemistryGrade = "A";
+        }
+        else if (chemistryScore >= 80) {
+            chemistryGrade = "B";
+        }
+        else if (chemistryScore >= 70) {
+            chemistryGrade = "C";
+        }
+        else if (chemistryScore >= 60) {
+            chemistryGrade = "D";
+        }
+        else if (chemistryScore >= 40) {
+            chemistryGrade = "E";
+        }
+        else if (chemistryScore >= 0 && chemistryScore < 40) {
+            chemistryGrade = "F";
+        }
+        else {
+            chemistryGrade = "Invalid";
+        }
+
+        if (biologyScore >= 90) {
+            biologyGrade = "A";
+        }
+        else if (biologyScore >= 80) {
+            biologyGrade = "B";
+        }
+        else if (biologyScore >= 70) {
+            biologyGrade = "C";
+        }
+        else if (biologyScore >= 60) {
+            biologyGrade = "D";
+        }
+        else if (biologyScore >= 40) {
+            biologyGrade = "E";
+        }
+        else if (biologyScore >= 0 && biologyScore < 40) {
+            biologyGrade = "F";
+        }
+        else {
+            biologyGrade = "Invalid";
+        }
+
+        if (mathScore >= 90) {
+            mathGrade = "A";
+        }
+        else if (mathScore >= 80) {
+            mathGrade = "B";
+        }
+        else if (mathScore >= 70) {
+            mathGrade = "C";
+        }
+        else if (mathScore >= 60) {
+            mathGrade = "D";
+        }
+        else if (mathScore >= 40) {
+            mathGrade = "E";
+        }
+        else if (mathScore >= 0 && mathScore < 40) {
+            mathGrade = "F";
+        }
+        else {
+            mathGrade = "Invalid";
+        }
+
+        if (comSciScore >= 90) {
+            comSciGrade = "A";
+        }
+        else if (comSciScore >= 80) {
+            comSciGrade = "B";
+        }
+        else if (comSciScore >= 70) {
+            comSciGrade = "C";
+        }
+        else if (comSciScore >= 60) {
+            comSciGrade = "D";
+        }
+        else if (comSciScore >= 40) {
+            comSciGrade = "E";
+        }
+        else if (comSciScore >= 0 && comSciScore < 40) {
+            comSciGrade = "F";
+        }
+        else {
+            comSciGrade = "Invalid";
+        }
+
+        if (physicsGrade == "Invalid" || chemistryGrade == "Invalid" || biologyGrade == "Invalid" || mathGrade == "Invalid" || comSciGrade == "Invalid") {
+            alert("Please enter only numbers from 0 to 100.");
+        }
+        else {
+            if (averageScore >= 90) {
+                averageGrade = "A";
+            }
+            else if (averageScore >= 80) {
+                averageGrade = "B";
+            }
+            else if (averageScore >= 70) {
+                averageGrade = "C";
+            }
+            else if (averageScore >= 60) {
+                averageGrade = "D";
+            }
+            else if (averageScore >= 40) {
+                averageGrade = "E";
+            }
+            else {
+                averageGrade = "F";
+            }
+
+            alert(`Your Physics grade is ${physicsGrade}.\nYour Chemistry grade is ${chemistryGrade}.\nYour Biology grade is ${biologyGrade}.\nYour Mathematics grade is ${mathGrade}.\nYour Computer Science grade is ${comSciGrade}.\nYour average score is ${averageScore}%, and your average grade is ${averageGrade}.`);
+        }
+        console.log("What is happening?");
     }
 }
 
