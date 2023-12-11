@@ -400,7 +400,6 @@ else {
 
             alert(`Your Physics grade is ${physicsGrade}.\nYour Chemistry grade is ${chemistryGrade}.\nYour Biology grade is ${biologyGrade}.\nYour Mathematics grade is ${mathGrade}.\nYour Computer Science grade is ${comSciGrade}.\nYour average score is ${averageScore}%, and your average grade is ${averageGrade}.`);
         }
-        console.log("What is happening?");
     }
 }
 
