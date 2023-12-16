@@ -205,7 +205,8 @@ else {
                 console.log("You've entered equal numbers.");
             }
             else {
-                console.log(`The minimum of your input numbers is ${min}, and the maximum is ${max}.`);
+                let sum = min + max;
+                console.log(`The minimum of your input numbers is ${min}, and the maximum is ${max}. Their sum is ${sum}.`);
             }
         }
     }
