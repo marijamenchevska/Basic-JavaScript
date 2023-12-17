@@ -283,8 +283,8 @@ else {
             console.log("Please enter only Latin alphabet letters (apostrophe is also allowed).");
         }
         else {
-            nameJoin(names, firstNamesArray, lastNamesArray);
-            console.log(names);
+            let finalArray = nameJoin(names, firstNamesArray, lastNamesArray);
+            console.log(finalArray);
         }
 
         /*  function nameJoin (totalArray, array1, array2) can also be declared like this:
