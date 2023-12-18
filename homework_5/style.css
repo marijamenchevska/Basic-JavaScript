@@ -1,0 +1,9 @@
+* {
+    color:chocolate;
+}
+
+div {
+    height: fit-content;
+    width: 400px;
+    background-color: #8a2be2;
+}
