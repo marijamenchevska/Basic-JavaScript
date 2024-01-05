@@ -1,0 +1,72 @@
+#container {
+    height: 500px;
+    width: 400px;
+    margin: auto;
+    display: grid;
+    background-color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    gap: 2px;
+    grid-template-rows: 0.4fr 0.5fr repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.digits, .operators, #dot, #equals, #delete, #deleteAll {
+    text-align: center;
+    line-height: 82.71px;
+    font-size: 30px;
+    cursor: default;
+}
+
+.digits, #dot, #delete, #deleteAll {
+    background-color: rgb(217, 217, 217);
+}
+
+.digits:hover, #dot:hover, #delete:hover, #deleteAll:hover {
+    background-color: rgb(194, 191, 191);
+}
+
+.digits:active, #dot:active, #delete:active, #deleteAll:active {
+    transform: scale(0.97);
+    background-color: rgb(156, 153, 153);
+}
+
+.operators, #equals {
+    background-color: rgb(223, 151, 75);
+    color: rgb(255, 252, 245);
+}
+
+.operators:hover, #equals:hover {
+    background-color: rgb(216, 124, 26);
+}
+
+.operators:active, #equals:active {
+    transform: scale(0.97);
+    background-color: rgb(196, 107, 12);
+}
+
+#topScreen, #bottomScreen {
+    grid-column: 1/5;
+    text-align: right;
+    padding-right: 5px;
+    padding-left: 5px;
+    color: rgb(255, 252, 245); 
+}
+
+#topScreen {
+    font-size: 20px;
+    line-height: 33.08px;
+}
+
+#bottomScreen {
+    font-size: 30px;
+    line-height: 41.36px;
+}
+
+#deleteAll {
+    grid-column: 1/3;
+}
+
+#zero {
+    grid-column: 2/4;
+}
