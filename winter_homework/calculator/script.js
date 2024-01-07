@@ -1,7 +1,7 @@
 /* Logic of the calculator:
 - Digits and dot are glued to each other to form a number until an operator or "=" is clicked
 - The number is then stored in an array which will be used for calculations after clicking "="
-- Operators are also stored in an array (also used later)
+- Operators are also stored in an array (also used later) when a digit is clicked
 - Calculations are conducted using the numbers and operators array after clicking "="
 
   Added features/restrictions:
