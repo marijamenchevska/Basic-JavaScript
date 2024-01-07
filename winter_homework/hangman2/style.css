@@ -1,0 +1,203 @@
+#container {
+    height: 820px;
+    width: 1200px;
+    margin: auto;
+    padding-top: 1px;
+    background-color: rgb(193, 215, 46);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+#alphabet-container {
+    height: fit-content;
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.alphabet {
+    height: 35px;
+    width: 30px;
+    background-color: white;
+    color: rgb(193, 215, 46);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 35px;
+    border-radius: 15%;
+    cursor: pointer;
+}
+
+.alphabet:hover {
+    background-color: rgb(243, 242, 242);
+}
+
+.alphabet:active {
+    transform: scale(0.95);
+    background-color: rgb(214, 213, 213);
+}
+
+select {
+    background-color: white;
+    color: rgb(193, 215, 46);
+    border: 1px solid white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+select:focus {
+    outline: white;
+}
+
+.optionField {
+    font-weight: 600;
+}
+
+#guessing-container {
+    height: 40px;
+    width: 1000px;
+    margin: auto;
+    line-height: 40px;
+    font-size: 35px;
+}
+
+#border-container {
+    box-sizing: border-box;
+    height: 250px;
+    width: 400px;
+    margin: 20px auto;
+    border: 2px dashed white;
+}
+
+#sketch-container {
+    box-sizing: inherit;
+    height: 200px;
+    width: 200px;
+    margin: 25px auto;
+    position: relative;
+    visibility: hidden;
+}
+
+#base {
+    height: 2px;
+    width: 60px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#column {
+    height: 196px;
+    width: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 2px;
+    left: 29px;
+}
+
+#beam {
+    height: 2px;
+    width: 130px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 29px;
+}
+
+#hook {
+    height: 20px;
+    width: 2px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 159px;
+}
+
+#head {
+    height: 40px;
+    width: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 139px;
+}
+
+#torso {
+    height: 70px;
+    width: 2px;
+    background-color: white;
+    position: absolute;
+    top: 63.6px;
+    left: 159px;
+}
+
+#left-arm {
+    height: 48px;
+    width: 3px;
+    background-color: white;
+    position: absolute;
+    top: 68px;
+    left: 141.3px;
+    transform: rotateZ(45deg);
+}
+
+#right-arm {
+    height: 48px;
+    width: 3px;
+    background-color: white;
+    position: absolute;
+    top: 68px;
+    left: 175.5px;
+    transform: rotateZ(-45deg);
+}
+
+#left-leg {
+    height: 55px;
+    width: 3px;
+    background-color: white;
+    position: absolute;
+    top: 124.6px;
+    left: 139.9px;
+    transform: rotateZ(45deg);
+}
+
+#right-leg {
+    height: 55px;
+    width: 3px;
+    background-color: white;
+    position: absolute;
+    top: 124.6px;
+    left: 177.9px;
+    transform: rotateZ(-45deg);
+}
+
+#buttons-container {
+    height: fit-content;
+    width: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons {
+    height: 60px;
+    width: 180px;
+    border: 2px solid white;
+    border-radius: 5px;
+    line-height: 60px;
+    font-size: 20px;
+}
+
+.buttons:hover {
+    background-color: rgb(179, 199, 47);
+    cursor: pointer;
+}
+
+.buttons:active {
+    transform: scale(0.95);
+}
