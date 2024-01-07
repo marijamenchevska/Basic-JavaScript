@@ -155,6 +155,7 @@ function buttonColorChange (buttonArray) {
 
 
 buttonDisabler(letterButtons); // can't press a letter until something is selected
+hintButton.style.pointerEvents = "none"; // can't press hint if you haven't chosen a category
 hiddenSketch(bodyParts);
 
 selectedOption.addEventListener("click", function() {
@@ -165,6 +166,7 @@ selectedOption.addEventListener("click", function() {
         wordChoice(northAmericanCapitals, hintsNorthAmerica, southAmericanCapitals, hintsSouthAmerica);
         hiddenWordCreation(guessWord);
         buttonEnabler(letterButtons);
+        hintButton.style.pointerEvents = "auto"; // hint is needed for the game
         selectedOption.style.pointerEvents = "none"; // a category should be unchoosable until we start a next game
     }
 });
@@ -203,6 +205,7 @@ playAgainButton.addEventListener("click", function () {
     hiddenSketch(bodyParts);
     selectedOption.value = "";
     wordField.innerHTML = "";
+    hintButton.style.pointerEvents = "none"; // can't press hint if you haven't chosen a category
     hintField.innerText = "";
     lifeCounter = 10;
     missedLetter = 0;
