@@ -123,7 +123,6 @@ function lifeTaker (leftoverLives) {
         livesLeft.innerText = "You lost!";
         bodyParts[9].style.visibility = "visible"; 
         buttonDisabler(letterButtons); // nothing should be clickable after the game is lost
-        selectedOption.style.pointerEvents = "none"; // a category should be unchoosable if the game is lost
     }
     else if (leftoverLives === 1) { // separate so that we don't have "You have 1 lives left" 
         livesLeft.innerText = `You have ${leftoverLives} life left.`;
@@ -166,6 +165,7 @@ selectedOption.addEventListener("click", function() {
         wordChoice(northAmericanCapitals, hintsNorthAmerica, southAmericanCapitals, hintsSouthAmerica);
         hiddenWordCreation(guessWord);
         buttonEnabler(letterButtons);
+        selectedOption.style.pointerEvents = "none"; // a category should be unchoosable until we start a next game
     }
 });
 
@@ -180,7 +180,6 @@ for (let i = 0; i < letterButtons.length; i++) {
         if (guessedLetter === guessWord.length) {
             livesLeft.innerText = "You won!";
             buttonDisabler(letterButtons); // nothing should be clickable after the game is won
-            selectedOption.style.pointerEvents = "none"; // a category should be unchoosable if the game is won
         }
 
         if (missedLetter === guessWord.length) {
