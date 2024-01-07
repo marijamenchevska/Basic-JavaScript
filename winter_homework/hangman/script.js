@@ -198,6 +198,7 @@ hintButton.addEventListener("click", function() {
 
 playAgainButton.addEventListener("click", function () {
     selectedOption.style.pointerEvents = "auto"; // a category should be choosable after finishing a game and starting a new one
+    buttonDisabler(letterButtons); // nothing should be clickable until after a category is chosen
     buttonColorChange(letterButtons); // otherwise, the color of the buttons will stay as in the previously played game
     hiddenSketch(bodyParts);
     selectedOption.value = "";
