@@ -40,7 +40,16 @@
             <div class="alphabet">z</div>
         </div>
         <br/>
-        <h2>The chosen category is capitals of North American countries.</h2>
+        <h2>The chosen category is capitals of:
+            <span>
+                <select name="continent" id="continent">
+                    <option value="" class="optionField" selected disabled>Please select</option>
+                    <option value="northAmerican" class="optionField">North American</option>
+                    <option value="southAmerican"class="optionField">South American</option>
+                </select>
+            </span>
+            countries.
+        </h2>
         <p id="guessing-container"></p>
         <h2 id="lives-left"></h2>
         <h2>Clue - <span id="hint-filler"></span></h2>

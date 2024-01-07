@@ -39,6 +39,23 @@
     background-color: rgb(214, 213, 213);
 }
 
+select {
+    background-color: white;
+    color: rgb(193, 215, 46);
+    border: 1px solid white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+select:focus {
+    outline: white;
+}
+
+.optionField {
+    font-weight: 600;
+}
+
 #guessing-container {
     height: 40px;
     width: 1000px;
