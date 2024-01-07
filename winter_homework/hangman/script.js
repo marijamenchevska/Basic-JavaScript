@@ -202,6 +202,7 @@ playAgainButton.addEventListener("click", function () {
     hiddenSketch(bodyParts);
     selectedOption.value = "";
     wordField.innerHTML = "";
+    hintField.innerText = "";
     lifeCounter = 10;
     missedLetter = 0;
     guessedLetter = 0;
