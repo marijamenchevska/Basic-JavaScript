@@ -1,12 +1,12 @@
 /* Logic of the calculator:
 - Digits and dot are glued to each other to form a number until an operator or "=" is clicked
-- The number is then stored in an array which be used for calculations after clicking "="
+- The number is then stored in an array which will be used for calculations after clicking "="
 - Operators are also stored in an array (also used later)
 - Calculations are conducted using the numbers and operators array after clicking "="
 
   Added features/restrictions:
 - Only 1 dot per number is allowed
-- Operator can be changed after another operator is subsequently clicked
+- Operator can be changed after another operator is subsequently clicked (can be changed as many times as we want)
 - If input of digits is empty (at the beginning of using the calculator or after clicking an operator), and . is clicked, a 0 is added
 - At the beginning of using the calculator, if an operator is first clicked, the first number becomes 0
 - The result can be further used for calculations
@@ -28,6 +28,15 @@ let result = ""; // at the beginning, the result is empty
 let dotCounter = 0; // variable used to restrict the number of dots per number
 let operatorCounter = 0; // variable used to change the operator if needed
 
+function variableReset () {
+    input = [];
+    numbers = []; 
+    operators = [];
+    result = "";
+    dotCounter = 0;
+    operatorCounter = 0;
+}
+
 function digitDotCollection (button) {
     input.push(button.innerText);
     number += button.innerText;
@@ -38,15 +47,6 @@ function zeroFiller () {
     if (number === "") { 
         number = "0";
     }
-}
-
-function variableReset () {
-    input = [];
-    numbers = []; 
-    operators = [];
-    result = "";
-    dotCounter = 0;
-    operatorCounter = 0;
 }
 
 function parseNumbers (numbersArray) {
@@ -128,8 +128,8 @@ for (let i = 0; i < operatorButtons.length; i++) {
         }
 
         operatorCounter++;
-        if (operatorCounter === 1) {
-            zeroFiller(); // if we start the calculator with an operator
+        if (operatorCounter === 1) { // the first time we enter an operator after a digit
+            zeroFiller(); // if the first thing we click is an operator
             numbers.push(number);
 
             if(topScreen.innerText.includes("=")) { // if we want to continue working with the result, the equation in topScreen first needs to be cleared 
